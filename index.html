@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla JS Todo App</title>
+    <link rel="stylesheet" type="text/css" href="./todo.css" />
+    <script defer src="./todo.js"></script>
+  </head>
+
+  <body>
+    <div class="todo">
+        <h1 class="todo-header">今日はなにをするか</h1><br>
+        <form class="form">
+          <label for="task-input">タスクを追加する</label><br>
+          <input
+            class="task-input"
+            id="task-input"
+            type="text"
+            required
+          />
+          <input
+            class="submit"
+            type="submit"
+            value="追加"
+          />
+        </form>
+      <div class="todo-list">
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+	body {
+		font-family: 'Roboto', sans-serif;
+		margin: 3em 10em 10em 10em;
+	}
+
+	.todo {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border: solid 1px black;
+		padding: 3em 1em 3em 1em;
+		
+	}
+
+	h1 {
+		font-weight: 300;
+		max-width: 300px;
+		text-align: center;
+	}
+
+
+	label {
+		font-weight: lighter;
+	}
+
+	button {
+		border: none;
+		font-family: inherit;
+		cursor: pointer;
+	}
+	.task-input {
+		padding: 0.5em 0.5em 0.5em 0.5em;
+	}
+	
+	input[type=text]:focus, textarea:focus {
+		box-shadow: 0 0 1px black;
+		border: 1px solid black;
+	}
+
+	.submit {
+		border: none;
+		font-family: inherit;
+		cursor: pointer;
+		background-color: white;
+		border: solid 1px black;
+		font-size: 0.9em;
+		font-weight: lighter;
+		color: black;
+		padding: 0.4em;
+		border-radius: 5%;
+		
+	}
+
+	.todo {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		margin: auto;
+		max-width: 800px;
+	}
+
+	.todo-list {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 2em 1em 0em 1em;
+		padding: 0em 1em 1em 1em;
+		max-height: 300px;
+		overflow-y: scroll;
+	}
+
+	::-webkit-scrollbar {
+		-webkit-appearance: none;
+		width: 7px;
+	}
+	
+	::-webkit-scrollbar-thumb {
+		border-radius: 4px;
+		background-color: rgba(146, 146, 146, 0.5);
+		box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+	}
+
+	.todo-list-task {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin: 0em 1em 1em 1em;
+		color: black;
+		text-align: center;
+		max-width: 600px;
+		padding: 0.5em 0.5em 0.5em 0.5em;
+	} 
