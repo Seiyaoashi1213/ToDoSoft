@@ -3,46 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>自分好みのToDoリスト</title>
-    <link rel="stylesheet" type="text/css" href="./ToDo-New-task.css" />
+    <title>タスク記入</title>
+    <link rel="stylesheet" type="text/css" href="ToDo-New-task.css" />
     <script defer src="./todo.js"></script>
   </head>
   <header>
     <h1>New Task</h1>
   </header>
-  <p>記入日</p>
-  <ul class="in">
-    <li>
-      <input type="text" />
-      <p>年</p>
-    </li>
-    <li>
-      <input type="text" />
-      <p>月</p>
-    </li>
-    <li>
-      <input type="text" />
-      <p>日</p>
-    </li>
-  </ul>
-  <p>期日</p>
-  <ul class="out">
-    <li>
-      <input type="text" />
-      <p>年</p>
-    </li>
-    <li>
-      <input type="text" />
-      <p>月</p>
-    </li>
-    <li>
-      <input type="text" />
-      <p>日</p>
-    </li>
-  </ul>
-  <p>内容</p>
-  <textarea name="" id="" cols="30" rows="10"></textarea>
-  <input type="submit" value="保存" />
 
+  <main>
+    <h4>記入日</h4>
+    <div class="in">
+      <ul>
+        <li>
+          <input class="year" type="text" />
+        </li>
+        <li><p>年</p></li>
+        <li>
+          <input type="text" />
+        </li>
+        <li><p>月</p></li>
+        <li>
+          <input type="text" />
+        </li>
+        <li><p>日</p></li>
+      </ul>
+    </div>
+    <br />
+
+    <h4>期日</h4>
+    <div class="out">
+      <ul>
+        <li>
+          <input class="year" type="text" />
+        </li>
+        <li><p>年</p></li>
+        <li>
+          <input type="text" />
+        </li>
+        <li><p>月</p></li>
+        <li>
+          <input type="text" />
+        </li>
+        <li><p>日</p></li>
+      </ul>
+    </div>
+    <br />
+
+    <h4>内容</h4>
+    <div class="free">
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <input class="btn" type="submit" value="保存" />
+    </div>
+  </main>
   <body></body>
 </html>
