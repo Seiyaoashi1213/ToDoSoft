@@ -42,3 +42,15 @@ li {
 .btn:hover {
   opacity: 1;
 }
+
+footer {
+  background-color: brown;
+  color: white;
+  height: 30px;
+}
+
+footer h3 {
+  font-size: 15px;
+  float: right;
+  margin: 5px 15px;
+}
