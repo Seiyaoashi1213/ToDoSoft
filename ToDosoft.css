@@ -1,35 +1,35 @@
+body {
+  background-image: url(https://drive.google.com/file/d/1-OhtFX0gWZ0InO--BxoGiQJxdre-B207/view?usp=share_link);
+}
+
 header {
   background-color: aquamarine;
-  color: white;
   height: 60px;
+}
+
+p {
+  margin-top: 0;
 }
 
 header h1 {
   font-size: 30px;
-  padding: 10px 15px;
-}
-
-.side-menu {
-  background-color: aqua;
-  width: 150px;
-  height: max-content;
-}
-
-.side-menu p {
+  margin: 10px 15px;
   color: white;
+  float: left;
+}
+
+li {
+  float: left;
+  list-style: none;
+  color: white;
+  font-size: 16px;
+  margin: 17px 10px;
 }
 
 .btn {
-  display: block;
-  background-color: aquamarine;
-  color: white;
-  border-bottom: none;
-  margin: 15px;
-  padding: 8px;
-  font-size: 15px;
   opacity: 0.8;
   border-radius: 5px;
-  box-shadow: 2px;
+  color: white;
 }
 
 .btn:hover {
