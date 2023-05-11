@@ -1,0 +1,37 @@
+header {
+  background-color: aquamarine;
+  color: white;
+  height: 60px;
+}
+
+header h1 {
+  font-size: 30px;
+  padding: 10px 15px;
+}
+
+.side-menu {
+  background-color: aqua;
+  width: 150px;
+  height: max-content;
+}
+
+.side-menu p {
+  color: white;
+}
+
+.btn {
+  display: block;
+  background-color: aquamarine;
+  color: white;
+  border-bottom: none;
+  margin: 15px;
+  padding: 8px;
+  font-size: 15px;
+  opacity: 0.8;
+  border-radius: 5px;
+  box-shadow: 2px;
+}
+
+.btn:hover {
+  opacity: 1;
+}
