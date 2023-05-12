@@ -61,7 +61,7 @@ input {
 textarea {
   border: 1px solid brown;
   background-color: rgb(241, 167, 167);
-  margin-left: 0 15px;
+  margin: 0 15px;
 }
 
 .btn {
