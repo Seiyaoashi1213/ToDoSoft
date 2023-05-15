@@ -61,6 +61,7 @@ input {
 select {
   height: 27px;
   margin: 0;
+  width: 200px;
   border: 1px solid #d14d72;
   background-color: #fef2f4;
 }
@@ -98,4 +99,5 @@ footer h3 {
 
 .free {
   flex-direction: column;
+  color: #afffbc;
 }
