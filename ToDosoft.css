@@ -9,6 +9,15 @@ header {
   height: 60px;
 }
 
+img {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+}
+
+.delete {
+  margin: 10px 17px;
+}
 image p {
   margin-top: 0;
 }
@@ -26,6 +35,14 @@ li {
   color: white;
   font-size: 16px;
   margin: 17px 10px;
+}
+
+li img {
+  margin-top: 0;
+}
+
+li p {
+  margin: 0;
 }
 
 .sort-list {
