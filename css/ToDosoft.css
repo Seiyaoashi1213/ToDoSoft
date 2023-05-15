@@ -1,11 +1,11 @@
 main {
-  background-image: url("texture_00003.jpg");
+  background-image: url("/画像/コルクボード.jpg");
   width: 100%;
   height: 100%;
 }
 
 header {
-  background-color: brown;
+  background-color: #d14d72;
   height: 60px;
 }
 
@@ -52,7 +52,7 @@ li p {
   opacity: 0.8;
   border-radius: 5px;
   color: white;
-  background-color: red;
+  background-color: #ffabab;
   padding: 5px 8px;
 }
 
@@ -61,7 +61,7 @@ li p {
 }
 
 footer {
-  background-color: brown;
+  background-color: #d14d72;
   color: white;
   height: 30px;
 }
