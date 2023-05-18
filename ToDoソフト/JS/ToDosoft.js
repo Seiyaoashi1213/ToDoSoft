@@ -1,5 +1,5 @@
 const form = document.querySelector(".form");
-const taskInput = document.querySelector(".");
+const taskInput = document.querySelector(".input");
 const todoList = document.querySelector(".todo-list");
 
 let state = {
@@ -8,9 +8,16 @@ let state = {
 
 // Dynamic HTML template for new tasks
 const template = (task) =>
-  `<th>
-    <p>${task.task}</p>
-  </th>`;
+  ` 
+  <table>
+    <tr>
+      <th>
+        <p>${task}</p>
+        <p><p>
+        <p><p>
+      </th>
+    </tr>
+  </table>`;
 
 // Render the template to the DOM
 const render = (htmlString, el) => {
