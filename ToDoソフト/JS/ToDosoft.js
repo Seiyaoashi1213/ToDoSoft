@@ -1,5 +1,5 @@
 const form = document.querySelector(".form");
-const taskInput = document.querySelector(".sub-title");
+const taskInput = document.querySelector(".");
 const todoList = document.querySelector(".todo-list");
 
 let state = {
