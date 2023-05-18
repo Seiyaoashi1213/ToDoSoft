@@ -10,113 +10,195 @@
 
   <body>
     <header>
-      <h1>ToDo</h1>
+      <div class="page-title">
+        <h1>ToDo</h1>
+      </div>
 
       <div class="header-icon">
         <ul>
-          <div class="sort-list">
-            <li><p>ソート</p></li>
-            <li><a class="btn in" href="#">記入順</a></li>
-            <li><a class="btn out" href="#">締め切り順</a></li>
-            <li><a class="btn color" href="#">色別</a></li>
-          </div>
+          <li><p>ソート</p></li>
+          <input class="sort-btn in" type="submit" value="記入順" />
+          <input class="sort-btn out" type="submit" value="締め切り順" />
+          <input class="sort-btn colorS" type="submit" value="色別" />
         </ul>
       </div>
     </header>
 
     <main>
       <form class="form">
-        <h4>記入日</h4>
-        <div class="in">
+        <div class="entry">
+          <h4>記入欄</h4>
+        </div>
+        <div class="roughly">
+          <h4>記入日</h4>
           <ul>
             <li>
-              <input class="input year" type="text" />
+              <input class="input" type="text" />
             </li>
             <li><p>年</p></li>
             <li>
-              <input class="input" type="text" />
+              <select class="month">
+                <option value="text">1月</option>
+                <option value="text">2月</option>
+                <option value="text">3月</option>
+                <option value="text">4月</option>
+                <option value="text">5月</option>
+                <option value="text">6月</option>
+                <option value="text">7月</option>
+                <option value="text">8月</option>
+                <option value="text">9月</option>
+                <option value="text">10月</option>
+                <option value="text">11月</option>
+                <option value="text">12月</option>
+              </select>
             </li>
-            <li><p>月</p></li>
             <li>
-              <input class="input" type="text" />
+              <select class="day">
+                <option value="text">1日</option>
+                <option value="text">2日</option>
+                <option value="text">3日</option>
+                <option value="text">4日</option>
+                <option value="text">5日</option>
+                <option value="text">6日</option>
+                <option value="text">7日</option>
+                <option value="text">8日</option>
+                <option value="text">9日</option>
+                <option value="text">10日</option>
+                <option value="text">11日</option>
+                <option value="text">12日</option>
+                <option value="text">13日</option>
+                <option value="text">14日</option>
+                <option value="text">15日</option>
+                <option value="text">16日</option>
+                <option value="text">17日</option>
+                <option value="text">18日</option>
+                <option value="text">19日</option>
+                <option value="text">20日</option>
+                <option value="text">21日</option>
+                <option value="text">22日</option>
+                <option value="text">23日</option>
+                <option value="text">24日</option>
+                <option value="text">25日</option>
+                <option value="text">26日</option>
+                <option value="text">27日</option>
+                <option value="text">28日</option>
+                <option value="text">29日</option>
+                <option value="text">30日</option>
+                <option value="text">31日</option>
+              </select>
             </li>
-            <li><p>日</p></li>
           </ul>
-        </div>
 
-        <h4>期日</h4>
-        <div class="out">
+          <h4>期日</h4>
+          <div class="out">
+            <ul>
+              <li>
+                <input class="input" type="text" />
+              </li>
+              <li><p>年</p></li>
+              <li>
+                <select class="month">
+                  <option value="text">1月</option>
+                  <option value="text">2月</option>
+                  <option value="text">3月</option>
+                  <option value="text">4月</option>
+                  <option value="text">5月</option>
+                  <option value="text">6月</option>
+                  <option value="text">7月</option>
+                  <option value="text">8月</option>
+                  <option value="text">9月</option>
+                  <option value="text">10月</option>
+                  <option value="text">11月</option>
+                  <option value="text">12月</option>
+                </select>
+              </li>
+              <li>
+                <select class="day">
+                  <option value="text">1日</option>
+                  <option value="text">2日</option>
+                  <option value="text">3日</option>
+                  <option value="text">4日</option>
+                  <option value="text">5日</option>
+                  <option value="text">6日</option>
+                  <option value="text">7日</option>
+                  <option value="text">8日</option>
+                  <option value="text">9日</option>
+                  <option value="text">10日</option>
+                  <option value="text">11日</option>
+                  <option value="text">12日</option>
+                  <option value="text">13日</option>
+                  <option value="text">14日</option>
+                  <option value="text">15日</option>
+                  <option value="text">16日</option>
+                  <option value="text">17日</option>
+                  <option value="text">18日</option>
+                  <option value="text">19日</option>
+                  <option value="text">20日</option>
+                  <option value="text">21日</option>
+                  <option value="text">22日</option>
+                  <option value="text">23日</option>
+                  <option value="text">24日</option>
+                  <option value="text">25日</option>
+                  <option value="text">26日</option>
+                  <option value="text">27日</option>
+                  <option value="text">28日</option>
+                  <option value="text">29日</option>
+                  <option value="text">30日</option>
+                  <option value="text">31日</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+
+          <h4>背景色</h4>
           <ul>
             <li>
-              <input class="input year" type="text" />
+              <select class="color">
+                <option value="未選択">選択してください</option>
+                <option
+                  value="color"
+                  style="background-color: #8cffba"
+                ></option>
+                <option
+                  value="color"
+                  style="background-color: #fff48c"
+                ></option>
+                <option
+                  value="color"
+                  style="background-color: #8c97ff"
+                ></option>
+                <option
+                  value="color"
+                  style="background-color: #ff8cd0"
+                ></option>
+                <option value="color" style="background-color: #ffff"></option>
+              </select>
             </li>
-            <li><p>年</p></li>
-            <li>
-              <input class="input" type="text" />
-            </li>
-            <li><p>月</p></li>
-            <li>
-              <input class="input" type="text" />
-            </li>
-            <li><p>日</p></li>
           </ul>
         </div>
 
-        <h4>カラー</h4>
-        <ul>
-          <li>
-            <select class="input">
-              <option value="未選択">選択してください</option>
-              <option
-                class="color1"
-                value="color"
-                style="background-color: #8cffba"
-              ></option>
-              <option
-                class="color2"
-                value="color"
-                style="background-color: #fff48c"
-              ></option>
-              <option
-                class="color3"
-                value="color"
-                style="background-color: #8c97ff"
-              ></option>
-              <option
-                class="color4"
-                value="color"
-                style="background-color: #ff8cd0"
-              ></option>
-              <option
-                class="color5"
-                value="color"
-                style="background-color: #ffff"
-              ></option>
-            </select>
-          </li>
-        </ul>
-        <h4>タイトル</h4>
-        <ul>
-          <li><input class="input sub-title" type="text" /></li>
-        </ul>
+        <div class="detail">
+          <h4>内容</h4>
+          <h4>タイトル</h4>
+          <ul>
+            <li><input class="input sub-title" type="text" /></li>
+          </ul>
+        </div>
 
-        <h4>内容</h4>
-        <ul class="free">
-          <li>
-            <textarea
-              class="input"
-              name=""
-              id=""
-              cols="30"
-              rows="10"
-            ></textarea>
-          </li>
-        </ul>
         <div class="last-btn">
           <ul>
-            <li><input class="btn" type="submit" value="保存" /></li>
-            <li><input class="btn" type="submit" value="戻る" /></li>
+            <li>
+              <textarea
+                class="input"
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+              ></textarea>
+            </li>
           </ul>
+
+          <input class="btn" type="submit" value="保存" />
         </div>
       </form>
 
