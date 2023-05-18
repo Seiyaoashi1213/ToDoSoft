@@ -62,13 +62,6 @@ h4 {
   padding: 5px 10px;
 }
 
-.form p {
-  margin: 0 5px;
-  padding: 3px;
-  font-weight: bold;
-  background-color: #fef2f4;
-}
-
 .roughly {
   display: flex;
 }
@@ -104,8 +97,8 @@ li {
 
 input {
   width: 50px;
-  height: 27px;
-  margin: 0;
+  height: 24px;
+  margin: 0 10px;
   text-align: left;
   border: 1px solid #d14d72;
   background-color: #fef2f4;

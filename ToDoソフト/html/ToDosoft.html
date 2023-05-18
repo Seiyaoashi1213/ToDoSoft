@@ -31,11 +31,10 @@
         </div>
         <div class="roughly">
           <h4>記入日</h4>
-          <ul>
+          <ul class="entry-day">
             <li>
-              <input class="input" type="text" />
+              <input class="input" type="number" maxlength="4" value="年" />
             </li>
-            <li><p>年</p></li>
             <li>
               <select class="month">
                 <option value="text">1月</option>
@@ -93,9 +92,8 @@
           <div class="out">
             <ul>
               <li>
-                <input class="input" type="text" />
+                <input class="input" type="number" maxlength="4" value="年" />
               </li>
-              <li><p>年</p></li>
               <li>
                 <select class="month">
                   <option value="text">1月</option>
@@ -204,7 +202,11 @@
 
       <table class="todo-list">
         <tr>
-          <th></th>
+          <th>
+            <p></p>
+            <p></p>
+            <p></p>
+          </th>
           <th></th>
           <th></th>
           <th></th>
