@@ -4,7 +4,7 @@ const entryDay = document.querySelector(".entry");
 const outDay = document.querySelector(".out");
 
 const contentTitle = document.querySelector(".sub-title");
-const contet = document.querySelector(textarea);
+const contet = document.querySelector("textarea");
 const allContent = [
   entryDay.value,
   outDay.value,
@@ -12,7 +12,6 @@ const allContent = [
   contet.value,
 ];
 
-const taskInput = document.querySelector(".task-input");
 const todoList = document.querySelector(".todo-list");
 
 let state = {
@@ -21,9 +20,9 @@ let state = {
 
 // Dynamic HTML template for new tasks
 const template = (task) =>
-  `<div>
+  `<th>
     <p>${task.task}</p>
-  </div>`;
+  </th>`;
 
 // Render the template to the DOM
 const render = (htmlString, el) => {
@@ -34,9 +33,9 @@ const render = (htmlString, el) => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const task = {
-    task: taskInput.value,
+    task: allContent.value,
   };
   state.tasks = [...state.tasks, task];
   render(template(state.tasks[state.tasks.length - 1]), todoList);
-  taskInput.value = "";
+  form.value = "";
 });
