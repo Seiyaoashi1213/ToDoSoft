@@ -166,3 +166,17 @@ footer h3 {
   float: right;
   margin: 5px 15px;
 }
+
+.entry {
+  display: flex;
+  margin: 0;
+}
+
+.end {
+  display: flex;
+  margin: 0;
+}
+
+.all-days {
+  display: flex;
+}
