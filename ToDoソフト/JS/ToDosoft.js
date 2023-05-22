@@ -21,7 +21,7 @@ let state = {
 
 // Dynamic HTML template for new tasks
 const template = (task) =>
-  `<tr>
+  `<tr background-color="${task.backgroundColor}">
     <div class="all-task">
       <div class="all-days">
         <div class="entry">
@@ -59,6 +59,7 @@ form.addEventListener("submit", (e) => {
     outDay: outDay.value,
     title: contentTitle.value,
     content: content.value,
+    backgroundColor: backgroundColor.value,
   };
 
   state.tasks = [...state.tasks, task];

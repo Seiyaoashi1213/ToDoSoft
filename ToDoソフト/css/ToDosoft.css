@@ -166,15 +166,22 @@ footer h3 {
   float: right;
   margin: 5px 15px;
 }
-
 .entry {
   display: flex;
+}
+
+.entry p {
   margin: 0;
+  padding: 3px 5px;
 }
 
 .end {
   display: flex;
+}
+
+.end p {
   margin: 0;
+  padding: 3px 5px;
 }
 
 .all-days {

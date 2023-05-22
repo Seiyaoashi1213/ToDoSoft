@@ -161,7 +161,11 @@
           <h4>背景色</h4>
           <ul>
             <li>
-              <select class="color">
+              <select
+                class="color"
+                name="backgroundColor"
+                onchange="JavaScript:selectChange()"
+              >
                 <option value="未選択">選択してください</option>
                 <option
                   value="#8cffba"
@@ -209,7 +213,9 @@
       </form>
 
       <table>
-        <tr class="todo-list"></tr>
+        <th class="todo-list">
+          <tr class="todo-list"></tr>
+        </th>
       </table>
     </main>
     <footer>
