@@ -11,9 +11,8 @@ const outDay = document.querySelector(".out-day");
 const contentTitle = document.querySelector(".sub-title");
 const content = document.querySelector('textarea[name="content"]');
 
-const backgroundColor = document.querySelector(".color");
-
 const todoList = document.querySelector(".todo-list");
+const taskBackgroundColor = document.getElementById("task-background-color");
 
 let state = {
   tasks: [],
@@ -21,7 +20,7 @@ let state = {
 
 // Dynamic HTML template for new tasks
 const template = (task) =>
-  `<tr background-color="${task.backgroundColor}">
+  `<th background-color="${task.backgroundColor}">
     <div class="all-task">
       <div class="all-days">
         <div class="entry">
@@ -40,7 +39,7 @@ const template = (task) =>
       <p>${task.title}</p>
       <p>${task.content}</p>
     </div>
-  </tr>`;
+  </th>`;
 
 // Render the template to the DOM
 const render = (htmlString, el) => {
@@ -59,7 +58,7 @@ form.addEventListener("submit", (e) => {
     outDay: outDay.value,
     title: contentTitle.value,
     content: content.value,
-    backgroundColor: backgroundColor.value,
+    taskBackgroundColor: taskBackgroundColor.value,
   };
 
   state.tasks = [...state.tasks, task];

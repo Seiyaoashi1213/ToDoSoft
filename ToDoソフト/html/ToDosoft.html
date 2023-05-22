@@ -100,7 +100,7 @@
             <li>
               <input
                 class="year out-year"
-                type="number"
+                type="date"
                 maxlength="4"
                 value="年"
               />
@@ -164,7 +164,7 @@
               <select
                 class="color"
                 name="backgroundColor"
-                onchange="JavaScript:selectChange()"
+                id="task-background-color"
               >
                 <option value="未選択">選択してください</option>
                 <option
@@ -213,9 +213,7 @@
       </form>
 
       <table>
-        <th class="todo-list">
-          <tr class="todo-list"></tr>
-        </th>
+        <th class="todo-list"></th>
       </table>
     </main>
     <footer>
