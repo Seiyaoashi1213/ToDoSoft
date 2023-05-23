@@ -141,6 +141,8 @@ th {
   width: 16% auto;
   height: auto;
   margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 footer {

@@ -17,7 +17,7 @@ let state = {
 
 // Dynamic HTML template for new tasks
 const template = (task) =>
-  `<tr background-color="${backgroundColor}">
+  `<tr bgcolor="${backgroundColor}">
     <div class="all-task">
       <div class="all-days">
         <div class="entry">
