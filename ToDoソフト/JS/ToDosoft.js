@@ -1,18 +1,15 @@
 const form = document.querySelector(".form");
 
-const entryYear = document.querySelector(".entry-year");
-const entryMonth = document.querySelector(".entry-month");
 const entryDay = document.querySelector(".entry-day");
 
-const outYear = document.querySelector(".out-year");
-const outMonth = document.querySelector(".out-month");
 const outDay = document.querySelector(".out-day");
 
 const contentTitle = document.querySelector(".sub-title");
 const content = document.querySelector('textarea[name="content"]');
 
+const backgroundColor = document.querySelector(".color");
+
 const todoList = document.querySelector(".todo-list");
-const taskBackgroundColor = document.getElementById("task-background-color");
 
 let state = {
   tasks: [],
@@ -20,26 +17,22 @@ let state = {
 
 // Dynamic HTML template for new tasks
 const template = (task) =>
-  `<th background-color="${task.backgroundColor}">
+  `<tr background-color="${backgroundColor}">
     <div class="all-task">
       <div class="all-days">
         <div class="entry">
           <p>記入</p>
-          <p>${task.entryYear}年</p>
-          <p>${task.entryMonth}</p>
           <p>${task.entryDay}</p>
         </div>
         <div class="end">
           <p>期日</p>
-          <p>${task.outYear}年</p>
-          <p>${task.outMonth}</p>
           <p>${task.outDay}</p>
         </div>
       </div>
       <p>${task.title}</p>
       <p>${task.content}</p>
     </div>
-  </th>`;
+  </tr>`;
 
 // Render the template to the DOM
 const render = (htmlString, el) => {
@@ -50,18 +43,47 @@ const render = (htmlString, el) => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const task = {
-    entryYear: entryYear.value,
-    entryMonth: entryMonth.value,
     entryDay: entryDay.value,
-    outYear: outYear.value,
-    outMonth: outMonth.value,
     outDay: outDay.value,
     title: contentTitle.value,
     content: content.value,
-    taskBackgroundColor: taskBackgroundColor.value,
+    backgroundColor: backgroundColor.value,
   };
 
   state.tasks = [...state.tasks, task];
   render(template(state.tasks[state.tasks.length - 1]), todoList);
   contentTitle.value = "";
 });
+
+//記入欄の背景色選択欄の選択後の色の設定
+const colorSelect = document.getElementById("color-select");
+console.log(colorSelect);
+colorSelect.addEventListener("change", function () {
+  const selectedOption = this.options[this.selectedIndex];
+  const selectedClass = selectedOption.className;
+  this.className = selectedClass;
+});
+
+//今日の日時を表示
+window.onload = function () {
+  //今日の日時を表示
+  var date = new Date();
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  var day = date.getDate();
+
+  var toTwoDigits = function (num, digit) {
+    num += "";
+    if (num.length < digit) {
+      num = "0" + num;
+    }
+    return num;
+  };
+
+  var yyyy = toTwoDigits(year, 4);
+  var mm = toTwoDigits(month, 2);
+  var dd = toTwoDigits(day, 2);
+  var ymd = yyyy + "-" + mm + "-" + dd;
+
+  document.getElementById("entry-day").value = ymd;
+};

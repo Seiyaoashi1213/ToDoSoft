@@ -50,7 +50,7 @@ main {
 .entry-box h4 {
   width: 50px;
   font-weight: h4;
-  margin: 0 15px 5px 15px;
+  margin: 0 15px 5px;
   background-color: #fef2f4;
   padding: 5px 10px;
 }
@@ -66,14 +66,6 @@ h4 {
   display: flex;
 }
 
-.month {
-  width: 50px;
-}
-
-.day {
-  width: 50px;
-}
-
 .detail {
   display: flex;
 }
@@ -85,20 +77,16 @@ ul {
   padding: 0;
 }
 
-li {
-  float: left;
-}
-
 .color {
-  width: 130px;
-  height: 20px;
-  margin: 0 15px;
+  width: 150px;
+  height: 24px;
+  margin: 7px 15px 0;
 }
 
 input {
-  width: 50px;
+  width: 100px;
   height: 24px;
-  margin: 0 10px;
+  margin: 7px 15px 0 15px;
   text-align: left;
   border: 1px solid #d14d72;
   background-color: #fef2f4;
@@ -166,24 +154,55 @@ footer h3 {
   float: right;
   margin: 5px 15px;
 }
-.entry {
-  display: flex;
-}
-
-.entry p {
-  margin: 0;
-  padding: 3px 5px;
-}
-
-.end {
-  display: flex;
-}
-
-.end p {
-  margin: 0;
-  padding: 3px 5px;
-}
 
 .all-days {
   display: flex;
+}
+
+.all-task p {
+  margin: 0;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.color0 {
+  background-color: #fef2f4;
+  width: 150px;
+  height: 24px;
+  margin: 7px 15px 0;
+}
+
+.color1 {
+  background-color: #8cffba;
+  width: 150px;
+  height: 24px;
+  margin: 7px 15px 0;
+}
+
+.color2 {
+  background-color: #fff48c;
+  width: 150px;
+  height: 24px;
+  margin: 7px 15px 0;
+}
+
+.color3 {
+  background-color: #8c97ff;
+  width: 150px;
+  height: 24px;
+  margin: 7px 15px 0;
+}
+
+.color4 {
+  background-color: #ff8cd0;
+  width: 150px;
+  height: 24px;
+  margin: 7px 15px 0;
+}
+
+.color5 {
+  background-color: #ffff;
+  width: 150px;
+  height: 24px;
+  margin: 7px 15px 0;
 }
