@@ -87,3 +87,21 @@ window.onload = function () {
 
   document.getElementById("entry-day").value = ymd;
 };
+
+// input要素を取得
+var getOutDay = document.getElementById("out-day");
+
+// 日付の変更イベントを監視
+getOutDay.addEventListener("input", function () {
+  // 選択された日付を取得
+  var selectedDate = new Date(this.value);
+
+  // 別のカレンダーで選択された日付を取得（例としてidが"otherDateInput"のinput要素とする）
+  var limitEntryDay = document.getElementById("entry-day");
+  var limit = new Date(limitEntryDay.value);
+
+  // 別のカレンダーで選択された日付よりも前の日を選択できないようにする
+  if (selectedDate < limit) {
+    this.value = limitEntryDay.value;
+  }
+});
