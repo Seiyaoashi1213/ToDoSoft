@@ -17,27 +17,23 @@ let state = {
 
 // Dynamic HTML template for new tasks
 const template = (task) =>
-  `<tr>
-    <tb class="${task.backgroundColor}">
-      <div class="all-task">
-        <div class="all-days">
-          <div class="entry">
-            <p>記入</p>
-            <p>${task.entryDay}</p>
-          </div>
-          <div class="end">
-            <p>期日</p>
-            <p>${task.outDay}</p>
-          </div>
-        </div>
-        <p>${task.title}</p>
-        <p>${task.content}</p>
+  `<div class="all-task">
+    <div class="all-days">
+      <div class="entry">
+        <h6 class="${task.backgroundColor}">記入</h6>
+        <p class="${task.backgroundColor}">${task.entryDay}</p>
       </div>
-      <button class="delete-btn" type="button">
-        <img src="../画像/ごみ箱アイコン.png"/>
-      </button>
-    </tb>
-  </tr>`;
+      <div class="end">
+        <h6 class="${task.backgroundColor}">期日</h6>
+        <p class="${task.backgroundColor}">${task.outDay}</p>
+      </div>
+    </div>
+    <p class="${task.backgroundColor}">${task.title}</p>
+    <p class="${task.backgroundColor}">${task.content}</p>
+    <button class="delete-btn ${task.backgroundColor}" type="button" onclick="removeExample(this)">
+      <img src="../画像/ごみ箱アイコン.png"/>
+    </button>
+  </div>`;
 
 // Render the template to the DOM
 const render = (htmlString, el) => {
@@ -58,6 +54,8 @@ form.addEventListener("submit", (e) => {
   state.tasks = [...state.tasks, task];
   render(template(state.tasks[state.tasks.length - 1]), todoList);
   contentTitle.value = "";
+  outDay.value = "";
+  content.value = "";
 });
 
 //記入欄の背景色選択欄の選択後の色の設定
@@ -111,20 +109,10 @@ getOutDay.addEventListener("input", function () {
   }
 });
 
-// let table = document.getElementById("fukaiShisuu");
-// for (let row of table.rows) {
-//   for (let cell of row.cells) {
-//     if (cell.tagName == "TD") {
-//       // TD 大文字でないと駄目
-//       if (Number(cell.innerText) >= 85) {
-//         cell.classList.add("d85");
-//       } else if (Number(cell.innerText) >= 80) {
-//         cell.classList.add("d80");
-//       } else if (Number(cell.innerText) >= 75) {
-//         cell.classList.add("d75");
-//       } else if (Number(cell.innerText) >= 70) {
-//         cell.classList.add("d70");
-//       }
-//     }
-//   }
-// }
+//削除ボタンの機能
+function removeExample(button) {
+  if (window.confirm("本当に削除しますか？")) {
+    let parent = button.parentNode;
+    parent.remove();
+  }
+}

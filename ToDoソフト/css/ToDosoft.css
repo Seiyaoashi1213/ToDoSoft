@@ -133,19 +133,6 @@ textarea {
   opacity: 1;
 }
 
-table {
-  width: max-content;
-  height: 700px;
-}
-
-tr {
-  width: 16%;
-  height: auto;
-  margin: 5px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 footer {
   background-color: #d14d72;
   color: white;
@@ -158,59 +145,72 @@ footer h3 {
   margin: 5px 15px;
 }
 
-.all-days {
+.todo-list {
+  height: 800px;
+  width: 1920px;
   display: flex;
+  flex-wrap: wrap;
+}
+
+.all-task {
+  width: 160px;
+  margin: 10px;
+}
+
+.all-days {
+  width: 160px;
+  display: flex;
+}
+
+.entry {
+  width: 80px;
+}
+
+.end {
+  width: 80px;
 }
 
 .all-task p {
   margin: 0;
   padding: 3px 5px;
   text-align: left;
+  font-size: 4px;
 }
 
 .color0 {
   background-color: #fef2f4;
-  width: 150px;
-  height: 24px;
-  margin: 7px 15px 0;
+  margin: 0;
 }
 
 .color1 {
   background-color: #8cffba;
-  width: 150px;
-  height: 24px;
   margin: 7px 15px 0;
 }
 
 .color2 {
   background-color: #fff48c;
-  width: 150px;
-  height: 24px;
-  margin: 7px 15px 0;
+  margin: 0;
 }
 
 .color3 {
   background-color: #8c97ff;
-  width: 150px;
-  height: 24px;
-  margin: 7px 15px 0;
+  margin: 0;
 }
 
 .color4 {
   background-color: #ff8cd0;
-  width: 150px;
-  height: 24px;
-  margin: 7px 15px 0;
+  margin: 0;
 }
 
 .color5 {
   background-color: #ffff;
-  width: 150px;
-  height: 24px;
-  margin: 7px 15px 0;
+  margin: 0;
 }
 
 .delete-btn {
+  padding: 0;
+  border: none;
+  background: transparent;
   width: 20px;
   height: 20px;
   float: right;
