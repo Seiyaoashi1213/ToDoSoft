@@ -34,7 +34,7 @@ const template = (task) =>
         <p>${task.content}</p>
       </div>
       <button class="delete-btn" type="button">
-      <img src="../画像/ごみ箱アイコン.png"/>
+        <img src="../画像/ごみ箱アイコン.png"/>
       </button>
     </tb>
   </tr>`;

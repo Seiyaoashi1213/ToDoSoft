@@ -134,12 +134,12 @@ textarea {
 }
 
 table {
-  width: 1200px;
+  width: max-content;
   height: 700px;
 }
 
-th {
-  width: 16% auto;
+tr {
+  width: 16%;
   height: auto;
   margin: 5px;
   display: flex;
@@ -213,13 +213,13 @@ footer h3 {
 .delete-btn {
   width: 20px;
   height: 20px;
-  display: flex;
+  float: right;
   border-radius: 100%;
 }
 
 .delete-btn img {
   width: 20px;
   height: 20px;
-  display: flex;
   border-radius: 100%;
+  position: relative;
 }
