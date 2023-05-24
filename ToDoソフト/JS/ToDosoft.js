@@ -18,20 +18,25 @@ let state = {
 // Dynamic HTML template for new tasks
 const template = (task) =>
   `<tr>
-    <div class="all-task">
-      <div class="all-days">
-        <div class="entry">
-          <p>記入</p>
-          <p>${task.entryDay}</p>
+    <tb bgColor="${backgroundColor}">
+      <div class="all-task">
+        <div class="all-days">
+          <div class="entry">
+            <p>記入</p>
+            <p>${task.entryDay}</p>
+          </div>
+          <div class="end">
+            <p>期日</p>
+            <p>${task.outDay}</p>
+          </div>
         </div>
-        <div class="end">
-          <p>期日</p>
-          <p>${task.outDay}</p>
-        </div>
+        <p>${task.title}</p>
+        <p>${task.content}</p>
       </div>
-      <p>${task.title}</p>
-      <p>${task.content}</p>
-    </div>
+      <button class="delete-btn" type="button">
+      <img src="../画像/ごみ箱アイコン.png"/>
+      </button>
+    </tb>
   </tr>`;
 
 // Render the template to the DOM
@@ -47,6 +52,7 @@ form.addEventListener("submit", (e) => {
     outDay: outDay.value,
     title: contentTitle.value,
     content: content.value,
+    backgroundColor: backgroundColor.value,
   };
 
   state.tasks = [...state.tasks, task];
@@ -104,3 +110,21 @@ getOutDay.addEventListener("input", function () {
     this.value = limitEntryDay.value;
   }
 });
+
+let table = document.getElementById("fukaiShisuu");
+for (let row of table.rows) {
+  for (let cell of row.cells) {
+    if (cell.tagName == "TD") {
+      // TD 大文字でないと駄目
+      if (Number(cell.innerText) >= 85) {
+        cell.classList.add("d85");
+      } else if (Number(cell.innerText) >= 80) {
+        cell.classList.add("d80");
+      } else if (Number(cell.innerText) >= 75) {
+        cell.classList.add("d75");
+      } else if (Number(cell.innerText) >= 70) {
+        cell.classList.add("d70");
+      }
+    }
+  }
+}

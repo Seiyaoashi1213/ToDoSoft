@@ -32,7 +32,7 @@ header {
 
 .sort-btn {
   opacity: 0.8;
-  width: 100px;
+  width: 80px;
   margin: auto;
   text-align: center;
 }
@@ -213,4 +213,10 @@ footer h3 {
   width: 150px;
   height: 24px;
   margin: 7px 15px 0;
+}
+
+.delete-btn img {
+  width: 20px;
+  height: 20px;
+  display: flex;
 }
