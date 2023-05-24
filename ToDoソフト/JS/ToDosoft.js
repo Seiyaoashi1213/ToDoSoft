@@ -18,7 +18,7 @@ let state = {
 // Dynamic HTML template for new tasks
 const template = (task) =>
   `<tr>
-    <tb bgColor="${backgroundColor}">
+    <tb class="${task.backgroundColor}">
       <div class="all-task">
         <div class="all-days">
           <div class="entry">
@@ -111,20 +111,20 @@ getOutDay.addEventListener("input", function () {
   }
 });
 
-let table = document.getElementById("fukaiShisuu");
-for (let row of table.rows) {
-  for (let cell of row.cells) {
-    if (cell.tagName == "TD") {
-      // TD 大文字でないと駄目
-      if (Number(cell.innerText) >= 85) {
-        cell.classList.add("d85");
-      } else if (Number(cell.innerText) >= 80) {
-        cell.classList.add("d80");
-      } else if (Number(cell.innerText) >= 75) {
-        cell.classList.add("d75");
-      } else if (Number(cell.innerText) >= 70) {
-        cell.classList.add("d70");
-      }
-    }
-  }
-}
+// let table = document.getElementById("fukaiShisuu");
+// for (let row of table.rows) {
+//   for (let cell of row.cells) {
+//     if (cell.tagName == "TD") {
+//       // TD 大文字でないと駄目
+//       if (Number(cell.innerText) >= 85) {
+//         cell.classList.add("d85");
+//       } else if (Number(cell.innerText) >= 80) {
+//         cell.classList.add("d80");
+//       } else if (Number(cell.innerText) >= 75) {
+//         cell.classList.add("d75");
+//       } else if (Number(cell.innerText) >= 70) {
+//         cell.classList.add("d70");
+//       }
+//     }
+//   }
+// }
