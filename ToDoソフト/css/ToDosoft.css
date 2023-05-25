@@ -215,32 +215,32 @@ footer h3 {
 
 .color0 {
   background-color: #fef2f4;
-  margin: 10px;
+  margin: 10px auto 10px auto;
 }
 
 .color1 {
   background-color: #8cffba;
-  margin: 10px;
+  margin: 10px auto 10px auto;
 }
 
 .color2 {
   background-color: #fff48c;
-  margin: 10px;
+  margin: 10px auto 10px auto;
 }
 
 .color3 {
   background-color: #8c97ff;
-  margin: 10px;
+  margin: 10px auto 10px auto;
 }
 
 .color4 {
   background-color: #ff8cd0;
-  margin: 10px;
+  margin: 10px auto 10px auto;
 }
 
 .color5 {
   background-color: #ffff;
-  margin: 10px;
+  margin: 10px auto 10px auto;
 }
 
 .delete-btn {
@@ -258,8 +258,4 @@ footer h3 {
   height: 20px;
   border-radius: 100%;
   position: relative;
-}
-
-.todo-list {
-  height: 100%;
 }

@@ -120,8 +120,14 @@ function removeExample(button) {
 }
 
 // ソート機能
+const sortBtnList = document.querySelector(".header-icon");
 // 記入日
 const enters = document.getElementsByClassName(".enters");
+
+sortBtnList.addEventListener("button", (e) => {
+  e.preventDefault();
+  const sort = enters.sort();
+});
 
 // 締め切り日
 const outs = document.getElementsByClassName(".outs");
