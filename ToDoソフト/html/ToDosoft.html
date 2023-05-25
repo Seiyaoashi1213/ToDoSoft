@@ -17,9 +17,10 @@
       <div class="header-icon">
         <ul>
           <li><p>ソート</p></li>
-          <input class="sort-btn" type="submit" value="記入順" />
-          <input class="sort-btn" type="submit" value="締め切り順" />
-          <input class="sort-btn" type="submit" value="色別" />
+
+          <button class="sort-btn" type="button">記入日順</button>
+          <button class="sort-btn" type="button">締め切り順</button>
+          <button class="sort-btn" type="button">色順</button>
         </ul>
       </div>
     </header>
@@ -63,8 +64,8 @@
               <textarea
                 name="content"
                 type="text"
-                cols="30"
-                rows="10"
+                rows="3"
+                maxlength="100"
               ></textarea>
             </li>
           </ul>

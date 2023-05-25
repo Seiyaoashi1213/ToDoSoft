@@ -15,21 +15,23 @@ let state = {
   tasks: [],
 };
 
-// Dynamic HTML template for new tasks
+// 記入したタスクの出力
 const template = (task) =>
-  `<div class="all-task">
+  `<div class="all-task ${task.backgroundColor}">
     <div class="all-days">
       <div class="entry">
-        <h6 class="${task.backgroundColor}">記入</h6>
-        <p class="${task.backgroundColor}">${task.entryDay}</p>
+        <h6>記入</h6>
+        <p>${task.entryDay}</p>
       </div>
       <div class="end">
-        <h6 class="${task.backgroundColor}">期日</h6>
-        <p class="${task.backgroundColor}">${task.outDay}</p>
+        <h6>期日</h6>
+        <p>${task.outDay}</p>
       </div>
     </div>
-    <p class="${task.backgroundColor}">${task.title}</p>
-    <p class="${task.backgroundColor}">${task.content}</p>
+    <div class="task-content">
+      <p>${task.title}</p>
+      <p>${task.content}</p>
+    </div>
     <button class="delete-btn ${task.backgroundColor}" type="button" onclick="removeExample(this)">
       <img src="../画像/ごみ箱アイコン.png"/>
     </button>
@@ -40,7 +42,7 @@ const render = (htmlString, el) => {
   el.innerHTML += htmlString;
 };
 
-// Submit form
+// 保存ボタンを押した後出力する
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const task = {
