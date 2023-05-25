@@ -101,6 +101,14 @@ ul {
   width: 150px;
   height: 24px;
   margin: 7px 15px 0;
+  border: 1px solid #d14d72;
+  background-color: #fef2f4;
+}
+
+select {
+  width: 150px;
+  height: 24px;
+  margin: 7px 15px 0;
 }
 
 input {
@@ -108,14 +116,6 @@ input {
   height: 24px;
   margin: 7px 15px 0 15px;
   text-align: left;
-  border: 1px solid #d14d72;
-  background-color: #fef2f4;
-}
-
-select {
-  height: 27px;
-  margin: 0;
-  width: 200px;
   border: 1px solid #d14d72;
   background-color: #fef2f4;
 }
@@ -178,6 +178,7 @@ footer h3 {
 .all-task {
   width: 160px;
   height: 160px;
+  margin: 9px;
 }
 
 .all-days {
@@ -215,32 +216,26 @@ footer h3 {
 
 .color0 {
   background-color: #fef2f4;
-  margin: 10px auto 10px auto;
 }
 
 .color1 {
   background-color: #8cffba;
-  margin: 10px auto 10px auto;
 }
 
 .color2 {
   background-color: #fff48c;
-  margin: 10px auto 10px auto;
 }
 
 .color3 {
   background-color: #8c97ff;
-  margin: 10px auto 10px auto;
 }
 
 .color4 {
   background-color: #ff8cd0;
-  margin: 10px auto 10px auto;
 }
 
 .color5 {
   background-color: #ffff;
-  margin: 10px auto 10px auto;
 }
 
 .delete-btn {
