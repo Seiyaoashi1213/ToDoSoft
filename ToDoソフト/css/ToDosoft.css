@@ -119,10 +119,10 @@ textarea {
 .btn {
   opacity: 0.8;
   border-radius: 5px;
-  color: black;
   background-color: #fef2f4;
-  padding: 5px 8px;
   width: 45px;
+  height: 20px;
+  font-size: 10px;
 }
 
 .btn:hover {
@@ -147,7 +147,7 @@ footer h3 {
 
 .todo-list {
   height: 800px;
-  width: 1920px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
