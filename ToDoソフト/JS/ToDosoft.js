@@ -119,13 +119,9 @@ function removeExample(button) {
   }
 }
 
-// ソートに関する値の取得
-const header = document.querySelector(".header-icon");
-
-const enters = document.querySelector(".enters");
-const outs = document.querySelector(".outs");
-
 // ソート機能
-header.addEventListener("button", (e) => {
-  e.preventDefault();
-});
+// 記入日
+const enters = document.getElementsByClassName(".enters");
+
+// 締め切り日
+const outs = document.getElementsByClassName(".outs");
