@@ -21,18 +21,18 @@ const template = (task) =>
     <div class="all-days">
       <div class="entry">
         <h6>記入</h6>
-        <p>${task.entryDay}</p>
+        <p class="enters">${task.entryDay}</p>
       </div>
       <div class="end">
         <h6>期日</h6>
-        <p>${task.outDay}</p>
+        <p class="outs">${task.outDay}</p>
       </div>
     </div>
     <div class="task-content">
       <p>${task.title}</p>
       <p>${task.content}</p>
     </div>
-    <button class="delete-btn ${task.backgroundColor}" type="button" onclick="removeExample(this)">
+    <button class="delete-btn" type="button" onclick="removeExample(this)">
       <img src="../画像/ごみ箱アイコン.png"/>
     </button>
   </div>`;
@@ -118,3 +118,14 @@ function removeExample(button) {
     parent.remove();
   }
 }
+
+// ソートに関する値の取得
+const header = document.querySelector(".header-icon");
+
+const enters = document.querySelector(".enters");
+const outs = document.querySelector(".outs");
+
+// ソート機能
+header.addEventListener("button", (e) => {
+  e.preventDefault();
+});

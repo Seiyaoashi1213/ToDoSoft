@@ -157,7 +157,6 @@ footer h3 {
 .all-task {
   width: 160px;
   height: 160px;
-  margin: 10px;
 }
 
 .all-days {
@@ -195,32 +194,32 @@ footer h3 {
 
 .color0 {
   background-color: #fef2f4;
-  margin: 0;
+  margin: 10px;
 }
 
 .color1 {
   background-color: #8cffba;
-  margin: 7px 15px 0;
+  margin: 10px;
 }
 
 .color2 {
   background-color: #fff48c;
-  margin: 0;
+  margin: 10px;
 }
 
 .color3 {
   background-color: #8c97ff;
-  margin: 0;
+  margin: 10px;
 }
 
 .color4 {
   background-color: #ff8cd0;
-  margin: 0;
+  margin: 10px;
 }
 
 .color5 {
   background-color: #ffff;
-  margin: 0;
+  margin: 10px;
 }
 
 .delete-btn {
