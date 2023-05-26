@@ -132,3 +132,10 @@ const enters = document.getElementsByClassName("enters");
 
 // // 締め切り日
 const outs = document.getElementsByClassName("outs");
+
+// ソート機能
+// 記入日順
+sortEntryDay.addEventListener("button", (e) => {
+  e.preventDefault();
+  const sortEntry = enters.value.sort();
+});
