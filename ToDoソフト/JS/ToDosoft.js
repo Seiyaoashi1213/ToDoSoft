@@ -119,23 +119,21 @@ function removeExample(button) {
   }
 }
 
-// ソート機能
-const sortEntryDay = document.querySelector(".entry-day-btn");
-const sortEndDay = document.querySelector(".end-day-btn");
-const sortSelectColor = document.querySelector(".sort-color");
+const entryDayBtn = document.querySelector(".entry-day-btn");
+const endDayBtn = document.querySelector("end-day-btn");
+const sortColor = document.querySelector(".sort-color");
 
-//タスクの内容
-const sortContents = document.getElementsByClassName("all-task");
-
-// // 記入日
-const enters = document.getElementsByClassName("enters");
-
-// // 締め切り日
-const outs = document.getElementsByClassName("outs");
-
-// ソート機能
-// 記入日順
-sortEntryDay.addEventListener("button", (e) => {
+entryDayBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  const sortEntry = enters.value.sort();
+  for (let i = 0; i < state.tasks.length; i++) {
+    state.tasks[i];
+  }
+
+  // 一度中身を消す
+  todoList.innerHTML = "";
+
+  // 再出力
+  tasks.map((task) => {
+    render(template(task), todoList);
+  });
 });
