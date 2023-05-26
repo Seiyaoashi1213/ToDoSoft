@@ -120,16 +120,15 @@ function removeExample(button) {
 }
 
 // ソート機能
-const sortBtnList = document.querySelector(".header-icon");
-const sortContents = document.querySelector(".all-task");
+const sortEntryDay = document.querySelector(".entry-day-btn");
+const sortEndDay = document.querySelector(".end-day-btn");
+const sortSelectColor = document.querySelector(".sort-color");
+
+//タスクの内容
+const sortContents = document.getElementsByClassName("all-task");
 
 // // 記入日
-const enters = document.getElementsByClassName(".enters");
+const enters = document.getElementsByClassName("enters");
 
 // // 締め切り日
-const outs = document.getElementsByClassName(".outs");
-
-// sortBtnList.addEventListener("button", (e) => {
-//   e.preventDefault();
-//   const sort = enters.sort();
-// });
+const outs = document.getElementsByClassName("outs");
