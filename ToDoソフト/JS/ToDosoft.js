@@ -123,17 +123,29 @@ const entryDayBtn = document.querySelector(".entry-day-btn");
 const endDayBtn = document.querySelector("end-day-btn");
 const sortColor = document.querySelector(".sort-color");
 
+const subTodoList = document.querySelector(".sub-todo-list");
+
+let tmp = { taskLists: [] };
+
 entryDayBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  for (let i = 0; i < state.tasks.length; i++) {
-    state.tasks[i];
-  }
+  tmp.taskLists = () => {
+    for (let i = 0; i < state.tasks.length; i++) {
+      tmp.taskLists = [...state.tasks.state.tasks[i]];
+      render(template(state.tasks[state.tasks.length - 1]), todoList);
+    }
+  };
 
-  // 一度中身を消す
+  // 一度中身を消す];
   todoList.innerHTML = "";
 
-  // 再出力
-  tasks.map((task) => {
-    render(template(task), todoList);
-  });
+  //   // 再出力
+  //   tasksLists.map((subTodoList) => {
+  //     render(tasksLists.state.tasks.entryDay.sort, todoList);
+  //   });
+
+  //   subTodoList.innerHTML = "";
 });
+
+// state.tasks = [...state.tasks, task];
+//   render(template(state.tasks[state.tasks.length - 1]), todoList);
