@@ -125,15 +125,16 @@ const sortColor = document.querySelector(".sort-color");
 
 entryDayBtn.addEventListener("click", (e) => {
   e.preventDefault();
+
   for (let i = 0; i < state.tasks.length; i++) {
-    state.tasks[i];
+    const allTasks = state.tasks[i];
   }
 
-  // 一度中身を消す
-  todoList.innerHTML = "";
-
-  // 再出力
-  tasks.map((task) => {
-    render(template(task), todoList);
-  });
+  const sortedTasks = allTasks.sort((a, b) => a.entryDay - b.entryDay);
 });
+
+// 一度中身を消す
+todoList.innerHTML = "";
+
+// 再出力
+render(sortedTasks, todoList);
