@@ -145,7 +145,6 @@ entryDayBtn.addEventListener("click", (e) => {
   todoList.innerHTML = "";
 
   // 再出力
-
   tmp.subTodoList.map((task) => {
     render(template(task), todoList);
   });
@@ -172,7 +171,6 @@ endDayBtn.addEventListener("click", (e) => {
   todoList.innerHTML = "";
 
   // 再出力
-
   tmp.subTodoList.map((task) => {
     render(template(task), todoList);
   });
@@ -199,7 +197,6 @@ sortColor.addEventListener("click", (e) => {
   todoList.innerHTML = "";
 
   // 再出力
-
   tmp.subTodoList.map((task) => {
     render(template(task), todoList);
   });
