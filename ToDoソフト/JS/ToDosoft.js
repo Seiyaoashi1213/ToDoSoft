@@ -132,7 +132,7 @@ entryDayBtn.addEventListener("click", (e) => {
     tmp.subTodoList = [...tmp.subTodoList, state.tasks[i]];
   }
 
-  const sortedTasks = tmp.subTodoList.sort(function (a, b) {
+  tmp.subTodoList.sort(function (a, b) {
     if (a.entryDay > b.entryDay) {
       return 1;
     } else {
@@ -145,5 +145,5 @@ entryDayBtn.addEventListener("click", (e) => {
   todoList.innerHTML = "";
 
   // 再出力
-  render(sortedTasks, todoList);
+  render(tmp.subTodoList, todoList);
 });
