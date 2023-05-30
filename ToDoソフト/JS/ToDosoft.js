@@ -120,32 +120,12 @@ function removeExample(button) {
 }
 
 const entryDayBtn = document.querySelector(".entry-day-btn");
-const endDayBtn = document.querySelector("end-day-btn");
+const endDayBtn = document.querySelector(".end-day-btn");
 const sortColor = document.querySelector(".sort-color");
 
 let tmp = { subTodoList: [] };
 
-// const newTemplate = (sortedTask) =>
-//   `<div class="all-task ${sortedTask.backgroundColor}">
-//     <div class="all-days">
-//       <div class="entry">
-//         <h6>記入</h6>
-//         <p class="enters">${sortedTask.entryDay}</p>
-//       </div>
-//       <div class="end">
-//         <h6>期日</h6>
-//         <p class="outs">${sortedTask.outDay}</p>
-//       </div>
-//     </div>
-//     <div class="task-content">
-//       <p>${sortedTask.title}</p>
-//       <p>${sortedTask.content}</p>
-//     </div>
-//     <button class="delete-btn" type="button" onclick="removeExample(this)">
-//       <img src="../画像/ごみ箱アイコン.png"/>
-//     </button>
-//   </div>`;
-
+// 記入日順にソート
 entryDayBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -169,19 +149,59 @@ entryDayBtn.addEventListener("click", (e) => {
   tmp.subTodoList.map((task) => {
     render(template(task), todoList);
   });
+  tmp.subTodoList = "";
+});
 
-  // for (let i = 0; i < tmp.subTodoList.length; i++) {
-  //   const sortedTask = {
-  //     entryDay: tmp.subTodoList[i].entryDay.value,
-  //     outDay: tmp.subTodoList[i].outDay.value,
-  //     title: tmp.subTodoList[i].title.value,
-  //     content: tmp.subTodoList[i].content.value,
-  //     backgroundColor: tmp.subTodoList[i].backgroundColor.value,
-  //   };
+// 期日順にソート
+endDayBtn.addEventListener("click", (e) => {
+  e.preventDefault();
 
-  //   state.tasks = [...state.tasks, sortedTask];
-  //   render(newTemplate(state.tasks[state.tasks.length - 1]), todoList);
-  // }
+  for (let i = 0; i < state.tasks.length; i++) {
+    tmp.subTodoList = [...tmp.subTodoList, state.tasks[i]];
+  }
 
-  // render(tmp.subTodoList, todoList);
+  tmp.subTodoList.sort(function (a, b) {
+    if (a.outDay > b.outDay) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+
+  // 一度中身を消す
+  todoList.innerHTML = "";
+
+  // 再出力
+
+  tmp.subTodoList.map((task) => {
+    render(template(task), todoList);
+  });
+  tmp.subTodoList = "";
+});
+
+// 色順にソート
+sortColor.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  for (let i = 0; i < state.tasks.length; i++) {
+    tmp.subTodoList = [...tmp.subTodoList, state.tasks[i]];
+  }
+
+  tmp.subTodoList.sort(function (a, b) {
+    if (a.backgroundColor > b.backgroundColor) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+
+  // 一度中身を消す
+  todoList.innerHTML = "";
+
+  // 再出力
+
+  tmp.subTodoList.map((task) => {
+    render(template(task), todoList);
+  });
+  tmp.subTodoList = "";
 });
