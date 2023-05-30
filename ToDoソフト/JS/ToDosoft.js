@@ -148,6 +148,8 @@ entryDayBtn.addEventListener("click", (e) => {
   tmp.subTodoList.map((task) => {
     render(template(task), todoList);
   });
+
+  // データの保管場所を空にする
   tmp.subTodoList = "";
 });
 
@@ -174,6 +176,8 @@ endDayBtn.addEventListener("click", (e) => {
   tmp.subTodoList.map((task) => {
     render(template(task), todoList);
   });
+
+  // データの保管場所を空にする
   tmp.subTodoList = "";
 });
 
@@ -200,5 +204,7 @@ sortColor.addEventListener("click", (e) => {
   tmp.subTodoList.map((task) => {
     render(template(task), todoList);
   });
+
+  // データの保管場所を空にする
   tmp.subTodoList = "";
 });
