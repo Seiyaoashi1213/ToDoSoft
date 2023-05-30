@@ -132,7 +132,14 @@ entryDayBtn.addEventListener("click", (e) => {
     tmp.subTodoList = [...tmp.subTodoList, state.tasks[i]];
   }
 
-  const sortedTasks = tmp.subTodoList.sort((a, b) => a.entryDay - b.entryDay);
+  const sortedTasks = tmp.subTodoList.sort(function (a, b) {
+    if (a.entryDay > b.entryDay) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+  // const sortedTasks = tmp.subTodoList.sort((a, b) => a.entryDay - b.entryDay);
 
   // 一度中身を消す
   todoList.innerHTML = "";
