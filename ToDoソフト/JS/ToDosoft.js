@@ -125,6 +125,27 @@ const sortColor = document.querySelector(".sort-color");
 
 let tmp = { subTodoList: [] };
 
+const newTemplate = (sortedTask) =>
+  `<div class="all-task ${sortedTask.backgroundColor}">
+    <div class="all-days">
+      <div class="entry">
+        <h6>記入</h6>
+        <p class="enters">${sortedTask.entryDay}</p>
+      </div>
+      <div class="end">
+        <h6>期日</h6>
+        <p class="outs">${sortedTask.outDay}</p>
+      </div>
+    </div>
+    <div class="task-content">
+      <p>${sortedTask.title}</p>
+      <p>${sortedTask.content}</p>
+    </div>
+    <button class="delete-btn" type="button" onclick="removeExample(this)">
+      <img src="../画像/ごみ箱アイコン.png"/>
+    </button>
+  </div>`;
+
 entryDayBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -139,11 +160,23 @@ entryDayBtn.addEventListener("click", (e) => {
       return -1;
     }
   });
-  // const sortedTasks = tmp.subTodoList.sort((a, b) => a.entryDay - b.entryDay);
 
   // 一度中身を消す
   todoList.innerHTML = "";
 
   // 再出力
-  render(tmp.subTodoList, todoList);
+  for (let i = 0; i < tmp.subTodoList.length; i++) {
+    const sortedTask = {
+      entryDay: tmp.subTodoList[i].entryDay.value,
+      outDay: tmp.subTodoList[i].outDay.value,
+      title: tmp.subTodoList[i].title.value,
+      content: tmp.subTodoList[i].content.value,
+      backgroundColor: tmp.subTodoList[i].backgroundColor.value,
+    };
+
+    state.tasks = [...state.tasks, sortedTask];
+    render(newTemplate(state.tasks[state.tasks.length - 1]), todoList);
+  }
+
+  // render(tmp.subTodoList, todoList);
 });
